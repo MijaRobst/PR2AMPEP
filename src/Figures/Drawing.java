@@ -18,6 +18,11 @@ public class Drawing extends Figure {
     }
     
     @Override
+    public void accept(FigureVisitor fv) {
+        fv.visit(this);
+    }
+    
+    @Override
     public boolean equals(Object o) {
         if (!(o instanceof Drawing)) {
             return false;

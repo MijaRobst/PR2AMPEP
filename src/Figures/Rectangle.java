@@ -21,6 +21,11 @@ public class Rectangle extends Figure {
     }
     
     @Override
+    public void accept(FigureVisitor fv) {
+        fv.visit(this);
+    }
+    
+    @Override
     public boolean equals(Object o) {
         if (!(o instanceof Rectangle)) {
             return false;

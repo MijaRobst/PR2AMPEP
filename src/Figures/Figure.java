@@ -18,6 +18,9 @@ public abstract class Figure {
         return y;
     }
     
+    public abstract void accept(FigureVisitor fv);
+    
+    @Override
     public boolean equals(Object o) {
         if (!(o instanceof Figure)) {
             return false;
