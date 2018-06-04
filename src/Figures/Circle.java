@@ -14,4 +14,12 @@ public class Circle extends Figure {
         return r;
     }
     
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Circle)) {
+            return false;
+        }
+        Circle c = (Circle) o;
+        return super.equals(o) && r == c.getRadius();
+    }
 }

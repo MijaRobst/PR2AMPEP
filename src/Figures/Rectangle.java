@@ -20,4 +20,12 @@ public class Rectangle extends Figure {
         return height;
     }
     
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Rectangle)) {
+            return false;
+        }
+        Rectangle r = (Rectangle) o;
+        return super.equals(o) && width == r.getWidth() && height == r.getHeight();
+    }
 }

@@ -17,4 +17,12 @@ public abstract class Figure {
     public double getY() {
         return y;
     }
+    
+    public boolean equals(Object o) {
+        if (!(o instanceof Figure)) {
+            return false;
+        }
+        Figure f = (Figure) o;
+        return x == f.getX() && y == f.getY();
+    }
 }
